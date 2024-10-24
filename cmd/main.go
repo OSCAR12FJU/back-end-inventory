@@ -38,6 +38,7 @@ func main() {
 	portAsNumber, _ := strconv.Atoi(dbPort)
 
 	connectKey := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", "localhost", portAsNumber, dbUser, dbPassword, dbName)
+	log.Println(connectKey)
 	db, err := postgress.CreateConnection(connectKey)
 	if err != nil {
 		log.Fatal(err.Error())
