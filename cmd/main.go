@@ -27,7 +27,7 @@ func main() {
 
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatalf("error al cargar el env file: %v", err)
+		log.Println("No archivo .env")
 	}
 	routers := mux.NewRouter()
 
